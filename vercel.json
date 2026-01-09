@@ -2,5 +2,15 @@
   "framework": null,
   "installCommand": "echo 'Skipping installation'",
   "buildCommand": "mkdir public && cp index.html index.tsx metadata.json public/ && cp -r src public/src",
-  "outputDirectory": "public"
+  "outputDirectory": "public",
+  "headers": [
+    {
+      "source": "/(.*\\.ts)",
+      "headers": [{ "key": "Content-Type", "value": "application/javascript; charset=utf-8" }]
+    },
+    {
+      "source": "/(.*\\.tsx)",
+      "headers": [{ "key": "Content-Type", "value": "application/javascript; charset=utf-8" }]
+    }
+  ]
 }
