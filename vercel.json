@@ -1,4 +1,5 @@
 {
   "framework": null,
-  "installCommand": "echo 'Skipping installation'"
+  "installCommand": "echo 'Skipping installation'",
+  "buildCommand": "echo 'Build step not required'"
 }
