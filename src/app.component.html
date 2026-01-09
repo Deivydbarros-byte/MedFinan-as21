@@ -1,0 +1,115 @@
+
+<div class="min-h-screen bg-slate-50 text-slate-800">
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span class="text-xl font-bold text-slate-700">Medfinanças</span>
+      </div>
+      <button (click)="scrollToPlans()" class="hidden md:block bg-teal-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-teal-700 transition-colors duration-300">
+        Ver Planos
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="relative bg-cover bg-center text-white" style="background-image: url('https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=1920')">
+    <div class="absolute inset-0 bg-slate-800 bg-opacity-70"></div>
+    <div class="relative container mx-auto px-6 py-24 md:py-40 text-center z-10">
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+        Planejamento Financeiro <span class="text-teal-400">para Médicos</span>
+      </h1>
+      <p class="mt-4 text-lg md:text-xl text-slate-200 max-w-3xl mx-auto">
+        Construa seu patrimônio com segurança e tranquilidade. Nós cuidamos das suas finanças para que você possa focar no que mais importa: seus pacientes.
+      </p>
+      <div class="mt-8">
+        <button (click)="requestDiagnosis('Geral')" class="bg-teal-600 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-teal-700 hover:scale-105 transform transition-all duration-300">
+          Quero diagnóstico gratuito
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Features Section -->
+  <section class="bg-white py-16 md:py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-slate-800">Por que escolher um especialista?</h2>
+      <p class="mt-2 text-slate-600 max-w-2xl mx-auto">Sua carreira é única, seu planejamento financeiro também deve ser.</p>
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="p-8 border border-slate-200 rounded-lg">
+          <div class="flex justify-center items-center h-12 w-12 rounded-full bg-teal-100 mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+          </div>
+          <h3 class="mt-4 text-xl font-semibold">Otimização Tributária</h3>
+          <p class="mt-2 text-slate-500">Reduza sua carga de impostos com estratégias legais e específicas para profissionais da saúde.</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="p-8 border border-slate-200 rounded-lg">
+          <div class="flex justify-center items-center h-12 w-12 rounded-full bg-teal-100 mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+          </div>
+          <h3 class="mt-4 text-xl font-semibold">Investimentos Inteligentes</h3>
+          <p class="mt-2 text-slate-500">Alocamos seus recursos em portfólios diversificados e alinhados ao seu perfil de risco e objetivos.</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="p-8 border border-slate-200 rounded-lg">
+          <div class="flex justify-center items-center h-12 w-12 rounded-full bg-teal-100 mx-auto">
+             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <h3 class="mt-4 text-xl font-semibold">Aposentadoria Segura</h3>
+          <p class="mt-2 text-slate-500">Planeje seu futuro com tranquilidade, garantindo a manutenção do seu padrão de vida na aposentadoria.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="planos" class="py-16 md:py-24 bg-slate-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-800">Planos Sob Medida para Sua Carreira</h2>
+        <p class="mt-2 text-slate-600 max-w-2xl mx-auto">Escolha o plano que melhor se adapta ao seu momento profissional e financeiro.</p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto items-start">
+        @for (plan of plans(); track plan.name) {
+          <div [class]="'bg-white rounded-xl shadow-lg p-8 flex flex-col h-full transition-transform duration-300 ' + (plan.popular ? 'border-2 border-teal-500 scale-105' : 'border border-slate-200')">
+            @if (plan.popular) {
+              <div class="text-center">
+                <span class="bg-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full -mt-12 mb-4 inline-block">MAIS POPULAR</span>
+              </div>
+            }
+            <h3 class="text-2xl font-bold text-slate-800">{{ plan.name }}</h3>
+            <p class="mt-1 text-teal-600 font-semibold">{{ plan.price }}</p>
+            <p class="mt-4 text-slate-500 flex-grow">{{ plan.description }}</p>
+            <ul class="mt-6 space-y-3">
+              @for (feature of plan.features; track feature) {
+                <li class="flex items-center">
+                  <svg class="h-5 w-5 text-green-500 mr-3 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-slate-600">{{ feature }}</span>
+                </li>
+              }
+            </ul>
+            <button (click)="requestDiagnosis(plan.name)" [class]="'w-full mt-8 font-bold py-3 rounded-lg transition-colors duration-300 ' + (plan.popular ? 'bg-teal-600 text-white hover:bg-teal-700' : 'bg-teal-100 text-teal-700 hover:bg-teal-200')">
+              Quero diagnóstico gratuito
+            </button>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-800 text-slate-400 py-8">
+    <div class="container mx-auto px-6 text-center">
+      <p>&copy; {{ currentYear() }} Medfinanças. Todos os direitos reservados.</p>
+      <p class="text-sm mt-1">Consultoria financeira especializada para médicos.</p>
+    </div>
+  </footer>
+
+</div>
