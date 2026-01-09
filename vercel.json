@@ -1,5 +1,5 @@
 {
   "framework": null,
   "installCommand": "echo 'Skipping installation'",
-  "buildCommand": "echo 'Build step not required'"
+  "buildCommand": "mkdir public && cp index.html index.tsx metadata.json public/ && cp -r src public/src"
 }
